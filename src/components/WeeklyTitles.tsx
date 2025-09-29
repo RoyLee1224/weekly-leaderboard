@@ -21,7 +21,7 @@ export function WeeklyTitles({ participants }: WeeklyTitlesProps) {
 
   const titles = [
     {
-      title: "🏆 Champion",
+      title: "Champion",
       description: "Most problems solved",
       participant: champion,
       icon: Crown,
@@ -30,7 +30,7 @@ export function WeeklyTitles({ participants }: WeeklyTitlesProps) {
       borderColor: "border-accent/30",
     },
     {
-      title: "🐢 Slow Walker",
+      title: "Slow Walker",
       description: "Fewest problems solved",
       participant: slowWalker,
       icon: Turtle,
@@ -39,7 +39,7 @@ export function WeeklyTitles({ participants }: WeeklyTitlesProps) {
       borderColor: "border-secondary/30",
     },
     {
-      title: "💰 Biggest Contributor",
+      title: "Biggest Contributor",
       description: "Most penalties paid",
       participant: biggestContributor?.penalty > 0 ? biggestContributor : null,
       icon: DollarSign,

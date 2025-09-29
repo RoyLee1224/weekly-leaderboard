@@ -35,7 +35,7 @@ const Index = () => {
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ delay: 0.2, duration: 0.5 }}
               >
-                🏆 Coding Challenge Arena
+                🏆 NYU LeetCode Challenge
               </motion.h1>
               <motion.p 
                 className="text-muted-foreground text-lg mt-2"
@@ -43,7 +43,6 @@ const Index = () => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.4, duration: 0.5 }}
               >
-                Weekly coding battles with real stakes. Miss your target, pay the price! 💰
               </motion.p>
             </div>
             

@@ -1,141 +1,102 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  /* Gaming Background - Dark slate for contrast */
-  --background: hsl(220, 13%, 9%);
-  --foreground: hsl(210, 40%, 98%);
+/* Gaming Dashboard Design System - Cyber Gaming Aesthetic */
 
-  /* Gaming Cards - Dark with slight blue tint */
-  --card: hsl(220, 13%, 12%);
-  --card-foreground: hsl(210, 40%, 98%);
-
-  /* Popover */
-  --popover: hsl(220, 13%, 12%);
-  --popover-foreground: hsl(210, 40%, 98%);
-
-  /* Electric Cyan Primary - Gaming energy */
-  --primary: hsl(192, 100%, 50%);
-  --primary-foreground: hsl(220, 13%, 9%);
-  --primary-glow: hsl(192, 100%, 70%);
-
-  /* Purple Secondary - Gaming sophistication */
-  --secondary: hsl(270, 50%, 40%);
-  --secondary-foreground: hsl(210, 40%, 98%);
-  --secondary-glow: hsl(270, 50%, 60%);
-
-  /* Muted elements */
-  --muted: hsl(220, 13%, 15%);
-  --muted-foreground: hsl(215, 20%, 65%);
-
-  /* Gold Accent - Champion colors */
-  --accent: hsl(45, 100%, 60%);
-  --accent-foreground: hsl(220, 13%, 9%);
-  --accent-glow: hsl(45, 100%, 70%);
-
-  /* Penalty Red */
-  --destructive: hsl(0, 75%, 60%);
-  --destructive-foreground: hsl(210, 40%, 98%);
-
-  /* Success Green */
-  --success: hsl(142, 76%, 45%);
-  --success-foreground: hsl(210, 40%, 98%);
-
-  /* Borders and inputs */
-  --border: hsl(220, 13%, 20%);
-  --input: hsl(220, 13%, 15%);
-  --ring: hsl(192, 100%, 50%);
-
-  /* Radius */
-  --radius: 0.75rem;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    /* Same gaming colors for both modes */
-    --background: hsl(220, 13%, 9%);
-    --foreground: hsl(210, 40%, 98%);
-    --card: hsl(220, 13%, 12%);
-    --card-foreground: hsl(210, 40%, 98%);
-    --primary: hsl(192, 100%, 50%);
-    --primary-foreground: hsl(220, 13%, 9%);
-    --secondary: hsl(270, 50%, 40%);
-    --secondary-foreground: hsl(210, 40%, 98%);
-    --muted: hsl(220, 13%, 15%);
-    --muted-foreground: hsl(215, 20%, 65%);
-    --accent: hsl(45, 100%, 60%);
-    --accent-foreground: hsl(220, 13%, 9%);
-    --destructive: hsl(0, 75%, 60%);
-    --destructive-foreground: hsl(210, 40%, 98%);
-    --success: hsl(142, 76%, 45%);
-    --border: hsl(220, 13%, 20%);
-    --ring: hsl(192, 100%, 50%);
+    /* Gaming Background - Dark slate for contrast */
+    --background: 220 13% 9%;
+    --foreground: 210 40% 98%;
+
+    /* Gaming Cards - Dark with slight blue tint */
+    --card: 220 13% 12%;
+    --card-foreground: 210 40% 98%;
+
+    /* Popover */
+    --popover: 220 13% 12%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Electric Cyan Primary - Gaming energy */
+    --primary: 192 100% 50%;
+    --primary-foreground: 220 13% 9%;
+    --primary-glow: 192 100% 70%;
+
+    /* Purple Secondary - Gaming sophistication */
+    --secondary: 270 50% 40%;
+    --secondary-foreground: 210 40% 98%;
+    --secondary-glow: 270 50% 60%;
+
+    /* Muted elements */
+    --muted: 220 13% 15%;
+    --muted-foreground: 215 20% 65%;
+
+    /* Gold Accent - Champion colors */
+    --accent: 45 100% 60%;
+    --accent-foreground: 220 13% 9%;
+    --accent-glow: 45 100% 70%;
+
+    /* Penalty Red */
+    --destructive: 0 75% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    /* Success Green */
+    --success: 142 76% 45%;
+    --success-foreground: 210 40% 98%;
+
+    /* Borders and inputs */
+    --border: 220 13% 20%;
+    --input: 220 13% 15%;
+    --ring: 192 100% 50%;
+
+    /* Gaming Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(192 100% 50%), hsl(192 100% 70%));
+    --gradient-secondary: linear-gradient(135deg, hsl(270 50% 40%), hsl(270 50% 60%));
+    --gradient-accent: linear-gradient(135deg, hsl(45 100% 60%), hsl(45 100% 70%));
+    --gradient-gaming: linear-gradient(135deg, hsl(192 100% 50%), hsl(270 50% 50%), hsl(45 100% 60%));
+    --gradient-card: linear-gradient(145deg, hsl(220 13% 12%), hsl(220 13% 15%));
+
+    /* Gaming Shadows */
+    --shadow-gaming: 0 10px 30px -10px hsl(192 100% 50% / 0.3);
+    --shadow-champion: 0 0 30px hsl(45 100% 60% / 0.4);
+    --shadow-penalty: 0 0 20px hsl(0 75% 60% / 0.3);
+    --shadow-card: 0 8px 32px hsl(220 13% 5% / 0.4);
+
+    /* Animation Variables */
+    --transition-gaming: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  /* Gaming theme - inherits from light mode for now */
+  .dark {
+    /* Same gaming colors - we'll use the same theme */
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Prevent layout shift */
-* {
-  box-sizing: border-box;
-}
-
-/* Reduce motion for users who prefer it */
-@media (prefers-reduced-motion: reduce) {
+@layer base {
   * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+    @apply border-border;
   }
-}
 
-/* Gaming gradient classes */
-.bg-gradient-card {
-  background: linear-gradient(145deg, hsl(220, 13%, 12%), hsl(220, 13%, 15%));
-}
-
-.bg-gradient-gaming {
-  background: linear-gradient(135deg, hsl(192, 100%, 50%), hsl(270, 50%, 50%), hsl(45, 100%, 60%));
-}
-
-.bg-gradient-accent {
-  background: linear-gradient(135deg, hsl(45, 100%, 60%), hsl(45, 100%, 70%));
-}
-
-.bg-gradient-primary {
-  background: linear-gradient(135deg, hsl(192, 100%, 50%), hsl(192, 100%, 70%));
-}
-
-.bg-gradient-secondary {
-  background: linear-gradient(135deg, hsl(270, 50%, 40%), hsl(270, 50%, 60%));
-}
-
-/* Gaming shadows */
-.shadow-card {
-  box-shadow: 0 8px 32px hsl(220, 13%, 5%, 0.4);
-}
-
-.shadow-champion {
-  box-shadow: 0 0 30px hsl(45, 100%, 60%, 0.4);
-}
-
-.shadow-penalty {
-  box-shadow: 0 0 20px hsl(0, 75%, 60%, 0.3);
-}
-
-.shadow-gaming {
-  box-shadow: 0 10px 30px -10px hsl(192, 100%, 50%, 0.3);
-}
-
-/* Hide development outlines */
-* {
-  outline: none !important;
-}
-
-/* Remove any unexpected borders that might appear */
-div[style*="border"] {
-  border: none !important;
+  body {
+    @apply bg-background text-foreground;
+  }
 }
